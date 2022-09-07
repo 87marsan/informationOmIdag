@@ -10,9 +10,9 @@
         public static void DagensInfo()
         {
             var dagensDatum = DateTime.Now;
-            var nummer = dagensDatum.DayOfYear;
-            var veckodag = dagensDatum.DayOfWeek;
-            var sommartid = dagensDatum.IsDaylightSavingTime();
+            var dayOfYear = dagensDatum.DayOfYear;
+            var dayOfWeek = dagensDatum.DayOfWeek;
+            var årstid = dagensDatum.IsDaylightSavingTime();
             var skottår = DateTime.IsLeapYear(DateTime.Now.Year);
             
             
@@ -20,9 +20,9 @@
             
             
             Console.WriteLine($"Datum     : {dagensDatum.ToString("dd MMM yyyy")}");
-            Console.WriteLine($"Nummer    : {nummer}");
-            Console.WriteLine($"Veckodag  : {veckodag}");
-            Console.WriteLine($"Sommartid : {sommartid}");
+            Console.WriteLine($"Nummer    : {dayOfYear}");
+            Console.WriteLine($"Veckodag  : {dayOfWeek}");
+            Console.WriteLine($"Sommartid : {årstid}");
             Console.WriteLine($"Skottår   : {skottår}");
         }
     }
